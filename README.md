@@ -1,5 +1,8 @@
 # Smart Edge & Line Detection System
+Made by - Aryan Patel
+registeration number - 24BAI10380
  **Live Demo:** [Open the Application](https://smart-edge-line-detection-nvbkfwmixkgvajw5rf85bb.streamlit.app/)
+
 ## Overview
 
 The Smart Edge & Line Detection System is a Computer Vision application that detects significant edges and straight lines in images.

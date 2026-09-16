@@ -15,9 +15,6 @@ from result_analysis import (
 )
 
 
-# --------------------------------------------------
-# PAGE CONFIGURATION
-# --------------------------------------------------
 
 st.set_page_config(
     page_title="Smart Edge & Line Detection",
@@ -26,9 +23,7 @@ st.set_page_config(
 )
 
 
-# --------------------------------------------------
-# TITLE
-# --------------------------------------------------
+
 
 st.title("📐 Smart Edge & Line Detection System")
 
@@ -39,9 +34,6 @@ st.write(
 )
 
 
-# --------------------------------------------------
-# IMAGE UPLOAD
-# --------------------------------------------------
 
 uploaded_file = st.file_uploader(
     "Choose an image",
@@ -49,9 +41,7 @@ uploaded_file = st.file_uploader(
 )
 
 
-# --------------------------------------------------
-# PROCESS IMAGE
-# --------------------------------------------------
+
 
 if uploaded_file is not None:
 
@@ -74,9 +64,7 @@ if uploaded_file is not None:
 
     else:
 
-        # ------------------------------------------
-        # IMAGE PROCESSING
-        # ------------------------------------------
+        
 
         gray = cv2.cvtColor(
             image,
@@ -90,27 +78,19 @@ if uploaded_file is not None:
         )
 
 
-        # ------------------------------------------
-        # CANNY EDGE DETECTION
-        # ------------------------------------------
-
+       
         edges = detect_edges(
             blurred
         )
 
 
-        # ------------------------------------------
-        # HOUGH LINE TRANSFORM
-        # ------------------------------------------
+     
 
         lines = detect_lines(
             edges
         )
 
 
-        # ------------------------------------------
-        # DRAW DETECTED LINES
-        # ------------------------------------------
 
         result = draw_lines(
             image,
@@ -118,9 +98,7 @@ if uploaded_file is not None:
         )
 
 
-        # ------------------------------------------
-        # RESULT ANALYSIS
-        # ------------------------------------------
+ 
 
         line_count = count_lines(
             lines
@@ -135,9 +113,7 @@ if uploaded_file is not None:
         )
 
 
-        # ------------------------------------------
-        # DISPLAY IMAGES
-        # ------------------------------------------
+        
 
         st.subheader("Image Processing Results")
 
@@ -180,9 +156,6 @@ if uploaded_file is not None:
             )
 
 
-        # ------------------------------------------
-        # DISPLAY RESULTS
-        # ------------------------------------------
 
         st.subheader(" Detection Results")
 
@@ -212,9 +185,7 @@ if uploaded_file is not None:
             )
 
 
-        # ------------------------------------------
-        # INFORMATION
-        # ------------------------------------------
+     
 
         st.divider()
 

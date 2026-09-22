@@ -25,7 +25,7 @@ st.set_page_config(
 
 
 
-st.title("📐 Smart Edge & Line Detection System")
+st.title(" Smart Edge & Line Detection System")
 
 st.write(
     "Upload an image to detect edges using the Canny Edge "

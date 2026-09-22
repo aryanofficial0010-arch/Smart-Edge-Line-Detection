@@ -3,13 +3,13 @@ import numpy as np
 
 
 def convert_to_grayscale(image):
-    """Convert the input image to grayscale."""
+    
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     return gray
 
 
 def apply_gaussian_blur(gray_image):
-    """Reduce image noise using Gaussian blur."""
+    
     blurred = cv2.GaussianBlur(
         gray_image,
         (5, 5),
@@ -19,7 +19,7 @@ def apply_gaussian_blur(gray_image):
 
 
 def detect_edges(gray_image):
-    """Detect edges using the Canny edge detection algorithm."""
+  
     edges = cv2.Canny(
         gray_image,
         50,
@@ -29,7 +29,7 @@ def detect_edges(gray_image):
 
 
 def detect_lines(edges):
-    """Detect straight lines using the Probabilistic Hough Transform."""
+  
 
     lines = cv2.HoughLinesP(
         edges,
@@ -47,7 +47,7 @@ def detect_lines(edges):
 
 
 def draw_lines(image, lines):
-    """Draw detected lines on the original image."""
+
 
     result = image.copy()
 

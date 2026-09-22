@@ -7,9 +7,9 @@ from result_analysis import (
 )
 
 
-print("--------------------------------")
+print("********************************")
 print("RESULT ANALYSIS TEST")
-print("--------------------------------")
+print("********************************")
 
 
 # Test line counting
@@ -40,6 +40,6 @@ message = generate_result_message(line_count)
 
 print("Result message:", message)
 
-print("--------------------------------")
+print("********************************")
 print("Analysis tests completed successfully.")
-print("--------------------------------")
+print("********************************)

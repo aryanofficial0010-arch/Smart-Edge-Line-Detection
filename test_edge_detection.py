@@ -24,11 +24,11 @@ result = draw_lines(image, lines)
 line_count = count_lines(lines)
 
 
-print("--------------------------------")
+print("********************************")
 print("CANNY + HOUGH LINE DETECTION")
-print("--------------------------------")
+print("********************************")
 print("Lines detected:", line_count)
-print("--------------------------------")
+print("********************************")
 
 # Save results
 cv2.imwrite("edge_result.jpg", edges)

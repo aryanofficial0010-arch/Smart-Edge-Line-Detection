@@ -3,7 +3,7 @@ import os
 
 
 def load_image(image_path):
-    """Load an image from the project folder."""
+   
 
     if not os.path.isabs(image_path):
         project_folder = os.path.dirname(os.path.abspath(__file__))
@@ -18,7 +18,7 @@ def load_image(image_path):
 
 
 def resize_image(image, scale=1):
-    """Resize the image if required."""
+  
 
     if scale == 1:
         return image
@@ -35,7 +35,7 @@ def resize_image(image, scale=1):
 
 
 def prepare_image(image):
-    """Prepare image for edge detection."""
+    
 
     gray = cv2.cvtColor(
         image,

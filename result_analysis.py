@@ -1,10 +1,10 @@
 def count_lines(lines):
-    """Count the number of detected straight lines."""
+ 
     return len(lines)
 
 
 def calculate_edge_percentage(edges):
-    """Calculate the percentage of pixels identified as edges."""
+   
     total_pixels = edges.shape[0] * edges.shape[1]
 
     if total_pixels == 0:
@@ -18,7 +18,7 @@ def calculate_edge_percentage(edges):
 
 
 def generate_result_message(line_count):
-    """Generate a message based on the number of detected lines."""
+   
     if line_count == 0:
         return "No straight lines were detected."
     elif line_count == 1:
